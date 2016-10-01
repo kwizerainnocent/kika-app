@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <!-- <link rel="stylesheet" type="text/css" media="all" href="css/materialdesignicons.min.css"> -->  
+        <link rel="stylesheet" type="text/css" href="material/material-icons.css">
+        <link rel="stylesheet" type="text/css" href="css/material.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/app.min.1.css">
+        <link rel="stylesheet" type="text/css" href="css/app.min.2.css">
+        <title>Welcome to tatu</title>
+        <style type="text/css">
+          body{
+            font-family:arial !important;
+            font-size: 12px !important;
+            text-transform: none !important;
+          }
+          .card{
+            margin-bottom: 10px;
+            font-size: 12px !important;
+            border-radius: 0px;
+          }
+          .card-header{
+            padding:7px;
+            margin:0;
+          }
+          .mdl-layout__tab{
+            font-size: 13px !important
+          }
+          .media-body p{
+            font-size: 12px;
+            color:#999;
+            padding:0;
+            margin:0;
+          }
+          .card-body p{
+            font-size: 12px;
+            padding:5px 0 5px;
+            margin:0;
+          }
+          .card-body{
+            padding:10px;
+          }
+          .card-header .media .pull-left img{
+            width:40px;
+            height:40px;
+          }
+          .media-body h5{
+            padding:0;
+            margin:0;
+          }
+          .wall-posting{
+            margin:2px 0px 7px;
+          }
+          .wall-comment-list{
+            display:none;
+          }
+          .page-content{
+            padding: 5px !important;
+          }
+          .wall-img-preview{
+            border:none;
+          }
+          #imagePost img{
+            width:100%;
+            margin:15px 0px 15px;
+
+          }
+          .mdl-layout__tab{
+            font-size:11px !important;
+          }
+        </style>
+    </head>
+    <body style="font-family:arial !important">
+<!-- Simple header with fixed tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title" style="text-transform:none !important; font-size:13px; ">
+            <div class="card-header">
+                <div class="media">
+                    <div class="pull-left">
+                        <img class="a-sm" src="img/profile-pics/1.jpg" alt="" style="border-radius:100%;">
+                    </div>
+
+                    <div class="media-body">
+                        <h5 style="color:#fff;">Kwizera Innocent</h5><small style="color:#ddd;">online</small>
+                    </div>
+                </div>
+            </div>
+      </span>
+    </div>
+  </header>
+
+
+
+  <div class="mdl-layout__drawer">
+
+                        <div class="card-header" >
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img class="a-sm" src="img/profile-pics/1.jpg" alt="" style="width:45px; height:45px;">
+                                </div>
+
+                                <div class="media-body">
+                                    <h6 style="padding:0; margin:0; font-weight:bold;">Mallinda Hollaway </h6><small>we are who we are</small>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="margin:0;" />
+
+
+    <ul class="nav">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="request.html">Make request</a></li>
+        <li><a href="activities.html">Farm Activities</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="login.html">logout</a></li>
+    </ul>
+  </div>
+
+
+
+
+  <main class="mdl-layout__content">
+    
+
+
+
+<div class="panel panel-default" style="position:relative;">
+                        <div class="panel-body" id="inbox" style="overflow:auto; height:450px;">
+                            <div style="border-radius:20px;  box-shadow:1px 1px 2px #ccc; background:#3CB3F7; max-width:60%; font-size:12px; color:#fff; padding:6px 10px 6px; display:inline; float:left;">
+                                This is gonna be set
+                            </div><div id="free-5"></div>
+                            <div style="border-radius:20px;  box-shadow:1px 1px 2px #ccc; max-width:60%; font-size:12px; background:#3CB3F7; color:#fff; padding:6px 10px 6px; display:inline; float:left;">
+                                This is gonna be set and sometimes even gets better
+                            </div><div id="free-5"></div>
+                            <div style="border-radius:20px;  box-shadow:1px 1px 2px #ccc; background:#f1f1f1; max-width:60%; font-size:12px; color:#3CB3F7; padding:6px 10px 6px; display:inline; float:right;">
+                                This is gonna be set
+                            </div><div id="free-5"></div>
+                            <div style="border-radius:20px;  box-shadow:1px 1px 2px #ccc; background:#f1f1f1; max-width:60%; font-size:12px; color:#3CB3F7; padding:6px 10px 6px; display:inline; float:right;">
+                                This is the second paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure.
+                            </div>
+                        </div>
+                            <div id="free-50"></div>
+                            <div id="free-20"></div>
+                        <div class="panel-footer" style="position:absolute; bottom:0; width:100%; left:0; padding:0; margin-bottom:0;">
+                            <textarea class="form-control" id="messageBox" style="margin-bottom:0; padding:15px;" placeholder="write message"></textarea>
+                        </div>
+                    </div>
+
+
+
+  </main>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+
+<!--         <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div> -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/material.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/chat.js"></script>
+        
+
+    </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/material-design-iconic-font.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/material.css">
+        <link rel="stylesheet" type="text/css" href="css/app.min.1.css">
+        <link rel="stylesheet" type="text/css" href="css/app.min.2.css">
+        <title>Welcome to Kika</title>
+        <style type="text/css">
+        *{
+            font-family:arial !important;
+            font-size: 12px;
+        }
+        h4{
+            color: #286090;
+            font-weight: bold !important;
+            font-size: 13px;
+        }
+          body{
+            font-family:arial !important;
+            font-size: 12px !important;
+            text-transform: none !important;
+          }
+          .card{
+            margin-bottom: 10px;
+            font-size: 12px !important;
+            border-radius: 0px;
+          }
+          .card-header{
+            padding:7px;
+            margin:0;
+          }
+          .mdl-layout__tab{
+            font-size: 13px !important
+          }
+          .media-body p{
+            font-size: 12px;
+            color:#999;
+            padding:0;
+            margin:0;
+          }
+          .card-body p{
+            font-size: 12px;
+            padding:5px 0 5px;
+            margin:0;
+          }
+          .card-body{
+            padding:10px;
+          }
+          .card-header .media .pull-left img{
+            width:40px;
+            height:40px;
+          }
+          .media-body h5{
+            padding:0;
+            margin:0;
+          }
+          .wall-posting{
+            margin:2px 0px 7px;
+          }
+          .wall-comment-list{
+            display:none;
+          }
+          .page-content{
+            padding: 5px !important;
+          }
+          .wall-img-preview{
+            border:none;
+          }
+          #imagePost img{
+            width:100%;
+            margin:15px 0px 15px;
+
+          }
+          .mdl-layout__tab{
+            font-size:11px !important;
+          }
+          .list-group .thumbnail{
+            color:#fff;
+            background:rgba(63,81,181, .7);
+            padding:7px 10px 7px;
+            border:none;
+          }
+          .list-group .thumbnail a{
+            color:#eee;
+          }
+          .fg-input{
+            color:#286090;
+          }
+          .text{
+            color:#286090;
+          }
+          .lb-header{
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            color:#286090 !important;
+          }
+          .lb-header i{
+            color:#286090 !important;
+          }
+          .btn{
+            background:green;
+            color:#fff;
+            text-decoration:none;
+          }
+        </style>
+    </head>
+    <body style="font-family:arial !important">
+<!-- Simple header with fixed tabs. -->
+
+<div class="login" data-lbg="teal" style="background:#fff;">
+            <!-- Login -->
+            <div class="l-block toggled" id="l-login" style="background:none;">
+            <h1 style="text-align:center; margin:auto; font-size:21px !important; color:green;">KIKA FARM</h1>
+                <div class="lb-header">
+                    <h3 style="color:#286090; font-weight:bold; font-size:18px;">Login</h3>
+                </div>
+
+                <div class="lb-body">
+                    <div class="form-group fg-float">
+                        <div class="fg-line">
+                            <input type="text" class="input-sm form-control fg-input">
+                            <label class="fg-label">Email Address</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group fg-float">
+                        <div class="fg-line">
+                            <input type="password" class="input-sm form-control fg-input">
+                            <label class="fg-label">Password</label>
+                        </div>
+                    </div>
+
+                    <a href="home.html" class="btn palette-Teal bg">Sign in</a>
+
+                    <div class="m-t-20">
+                        <a data-block="#l-forget-password" data-bg="purple" href="#" class="palette-Teal text">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forgot Password -->
+            <div class="l-block" id="l-forget-password">
+            <h1 style="text-align:center; margin:auto; font-size:21px !important; color:green;">KIKA FARM</h1>
+                <div class="lb-header palette-Purple bg">
+                    <h3 style="color:#286090; font-weight:bold; font-size:18px;">Forgot Password</h3>
+                </div>
+
+                <div class="lb-body">
+                    <p style="font-size:12px; color:#286090;">Please provide your email and a link will be sent to you to reset your password</p>
+
+                    <div class="form-group fg-float">
+                        <div class="fg-line">
+                            <input type="text" class="input-sm form-control fg-input">
+                            <label class="fg-label">Email Address</label>
+                        </div>
+                    </div>
+
+                    <button class="btn palette-Purple bg">Submit</button>
+
+                    <div class="m-t-30">
+                        <a data-block="#l-login" data-bg="teal" class="palette-Purple text d-block m-b-5" href="#">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Wide card with share menu button -->
+<style>
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+
+<!--         <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div> -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/material.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/waves.min.js"></script>
+        <script src="js/functions.js"></script>
+    </body>
+</html>
